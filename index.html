@@ -12,29 +12,66 @@ html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#
 <body>
 <script>
 (function(){
-  const _0x=['aWZyYW1l','c3Jj','YWJvdXQ6Ymxhbms=','aHR0cHM6Ly9mYW5jb29kZWUucGFnZXMuZGV2Lz9zcmM9aHR0cHM6Ly9ob29mb290LnJ1L2lwdHYvcGxheWVyLmh0bWw/aWQ9T0RJMg==','c3R5bGU','cG9zaXRpb246YWJzb2x1dGU7dG9wOjA7bGVmdDowO3dpZHRoOjEwMCU7aGVpZ2h0OjEwMCU7Ym9yZGVyOm5vbmU7','YXBwZW5kQ2hpbGQ=','Ym9keQ==','Y3JlYXRlRWxlbWVudA==','c2V0QXR0cmlidXRl'];
-  const d=document,w=window;
-  const e=d[_0x[8]](atob(_0x[0]));
-  e[_0x[9]](atob(_0x[1]),atob(_0x[2]));
-  e[_0x[9]](atob(_0x[4]),atob(_0x[5]));
-  d[atob(_0x[7])][atob(_0x[6])](e);
+  const _0x = [
+    'aWZyYW1l',                                          
+    'c3Jj',                                              
+    'YWJvdXQ6Ymxhbms=',                                  
+    'aHR0cHM6Ly9mYW5jb29kZWUucGFnZXMuZGV2Lz9zcmM9aHR0cHM6Ly9ob29mb290LnJ1L2lwdHYvcGxheWVyLmh0bWw/aWQ9T0RJMg==', 
+    'c3R5bGU',                                           
+    'cG9zaXRpb246YWJzb2x1dGU7dG9wOjA7bGVmdDowO3dpZHRoOjEwMCU7aGVpZ2h0OjEwMCU7Ym9yZGVyOm5vbmU7', 
+    'YXBwZW5kQ2hpbGQ=',                                 
+    'Ym9keQ==',                                         
+    'Y3JlYXRlRWxlbWVudA==',                             
+    'c2V0QXR0cmlidXRl',                                 
+    'YWxsb3c=',                                          
+    'YXV0b3BsYXk7IGZ1bGxzY3JlZW47IHBpY3R1cmUtaW4tcGljdHVyZTsgZW5jcnlwdGVkLW1lZGlhOyBneXJvc2NvcGU=', 
+    'YWxsb3dGdWxsc2NyZWVu'                             
+  ];
+
+  const d = document;
+  const e = d[atob(_0x[8])](atob(_0x[0]));              
+
+  // start as about:blank
+  e[atob(_0x[9])](atob(_0x[1]), atob(_0x[2]));
+
+  // full size
+  e[atob(_0x[9])](atob(_0x[4]), atob(_0x[5]));
+
+  // needed for video players
+  e[atob(_0x[9])](atob(_0x[10]), atob(_0x[11]));
+  e[atob(_0x[12])] = true;
+  e.frameBorder = '0';
+
+  d[atob(_0x[7])][atob(_0x[6])](e);                     
+
+  // load real source after a short delay
   setTimeout(function(){
-    e[atob(_0x[1])]=atob(_0x[3]);
-  },30);
-  const block=function(ev){ev.preventDefault();ev.stopPropagation();return false;};
-  d.addEventListener('contextmenu',block,true);
-  d.addEventListener('selectstart',block,true);
-  d.addEventListener('dragstart',block,true);
-  d.addEventListener('copy',block,true);
-  d.addEventListener('cut',block,true);
-  d.addEventListener('keydown',function(ev){
-    if(ev.key==='F12'||(ev.ctrlKey&&ev.shiftKey&&(ev.key==='I'||ev.key==='J'||ev.key==='C'))||
-       (ev.ctrlKey&&(ev.key==='U'||ev.key==='S'||ev.key==='P'))||ev.keyCode===123){
+    e[atob(_0x[1])] = atob(_0x[3]);
+  }, 40);
+
+  // light protection (no debugger trap)
+  const block = function(ev){
+    ev.preventDefault();
+    ev.stopPropagation();
+    return false;
+  };
+
+  d.addEventListener('contextmenu', block, true);
+  d.addEventListener('selectstart', block, true);
+  d.addEventListener('dragstart', block, true);
+  d.addEventListener('copy', block, true);
+  d.addEventListener('cut', block, true);
+
+  d.addEventListener('keydown', function(ev){
+    if (
+      ev.key === 'F12' ||
+      (ev.ctrlKey && ev.shiftKey && ['I','J','C'].includes(ev.key)) ||
+      (ev.ctrlKey && ['U','S','P'].includes(ev.key)) ||
+      ev.keyCode === 123
+    ){
       block(ev);
     }
-  },true);
-  Object.defineProperty(w,'console',{get:function(){return{}},set:function(){}});
-  setInterval(function(){debugger;},50);
+  }, true);
 })();
 </script>
 </body>
